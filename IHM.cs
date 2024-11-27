@@ -124,11 +124,7 @@ namespace Recipe
         {
             Console.Clear();
             Console.WriteLine("--- Liste des recettes ---");
-            Console.WriteLine("0. Retour au menu principal");
-            Console.Write("Choix : ");
-
-            var retour = Console.ReadLine();
-            if (retour == "0") return;
+   
 
             var recettes = context.Recettes
                 .Include(r => r.Categorie)
@@ -160,11 +156,6 @@ namespace Recipe
             {
                 Console.Clear();
                 Console.WriteLine("--- Supprimer une recette ---");
-                Console.WriteLine("0. Retour au menu principal");
-                Console.Write("Choix : ");
-
-                var retour = Console.ReadLine();
-                if (retour == "0") return;
 
                 Console.WriteLine("Recettes disponibles :");
 
